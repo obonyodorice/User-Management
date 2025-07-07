@@ -1,0 +1,8 @@
+Django
+django-crispy-forms==2.0
+crispy-bootstrap5==0.7
+Pillow
+whitenoise==6.8.2
+django_environ==0.11.2 
+gunicorn==21.2.0
+psycopg2-binary==2.9.10
