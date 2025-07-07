@@ -1,0 +1,23 @@
+{% extends 'accounts/base.html' %}
+
+{% block title %}Email Verification - User Management System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header">
+                <h3>Email Verification</h3>
+            </div>
+            <div class="card-body text-center">
+                <div class="alert alert-info">
+                    <h5>Check Your Email</h5>
+                    <p>We've sent a verification link to your email address. Please click the link to verify your account.</p>
+                    <p>If you don't see the email, check your spam folder.</p>
+                </div>
+                <a href="{% url 'accounts:login' %}" class="btn btn-primary">Back to Login</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

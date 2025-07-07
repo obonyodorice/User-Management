@@ -1,0 +1,24 @@
+{% extends 'accounts/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Edit User - User Management System{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h3>Edit User: {{ user.username }}</h3>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    {% crispy form %}
+                </form>
+                <hr>
+                <a href="{% url 'accounts:admin_users' %}" class="btn btn-secondary">Back to Users</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
