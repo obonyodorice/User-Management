@@ -15,9 +15,9 @@ SECRET_KEY = 'django-insecure-5m+u=q14bmye)49!7^c&e+x4zecotdld3ziii#5wrzp3dhtci_
 
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['https://20d-django-project-production.up.railway.app', '20d-django-project-production.up.railway.app', 'localhost', '127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = []
+CSRF_TRUSTED_ORIGINS = ['https://20d-django-project-production.up.railway.app']
 
 
 INSTALLED_APPS = [
