@@ -2,18 +2,18 @@
 
 A complete user management system with registration, verification, profile management, and admin features.
 
-live link: https://20d-django-project-production.up.railway.app/
+**Live Demo**: [https://20d-django-project-production.up.railway.app/](https://20d-django-project-production.up.railway.app/)
 
 
 ## Features
 
 - User registration with email verification
-![Registration Page](images/screenshot2.png)
+![Registration Page](./images/Screenshot2.png)
 
-![Login Page](images/screenshot3.png)
+![Login Page](./images/Screenshot3.png)
 
 - Profile management (view/edit profile, change password)
-![User Profile](images/screenshot1.png)
+![User Profile](./images/Screenshot1.png)
 
 - Admin panel for user management
 - User types (Regular/Admin)
@@ -22,41 +22,45 @@ live link: https://20d-django-project-production.up.railway.app/
 ## Installation
 
 ### 1. Clone and Setup
-bash
+```bash
 git clone https://github.com/obonyodorice/20D-Django-project.git
 cd user_management_system
 python -m venv venv
+```
 
 
 ### 2. Activate Virtual Environment
-bash
+```bash
 # Windows
-venv\Scripts\activate
+source venv\Scripts\activate
 
 # macOS/Linux
 source venv/bin/activate
+```
 
 
 ### 3. Install Dependencies
-bash
+```bash
 pip install -r requirements.txt
+```
 
 
 ### 4. Configure Database
-bash
+```bash
 python manage.py makemigrations
 python manage.py migrate
+```
 
 
 ### 5. Create Superuser
-bash
+```bash
 python manage.py createsuperuser
-
+```
 
 ### 6. Run Server
-bash
+```bash
 python manage.py runserver
-
+```
 
 ## Usage
 
