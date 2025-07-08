@@ -2,10 +2,19 @@
 
 A complete user management system with registration, verification, profile management, and admin features.
 
+live link: https://20d-django-project-production.up.railway.app/
+
+
 ## Features
 
 - User registration with email verification
+![Registration Page](images/screenshot2.png)
+
+![Login Page](images/screenshot3.png)
+
 - Profile management (view/edit profile, change password)
+![User Profile](images/screenshot1.png)
+
 - Admin panel for user management
 - User types (Regular/Admin)
 - Responsive Bootstrap UI
@@ -55,10 +64,11 @@ python manage.py runserver
 - *Home/Profile*: http://localhost:8000/
 - *Register*: http://localhost:8000/register/
 - *Login*: http://localhost:8000/login/
-- *Admin Panel*: http://localhost:8000/admin/users/ (Admin users only)
+- *Admin Panel*: http://localhost:8000/admin/user/ (Admin users only)
 
 ### User Types
 - *Regular Users*: Can view/edit their own profile
+
 - *Admin Users*: Can manage all users + regular user features
 
 ## Default Accounts
@@ -83,3 +93,4 @@ user_management/
 - Bootstrap 5
 - Crispy Forms
 - SQLite (default)
+
