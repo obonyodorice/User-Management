@@ -8,6 +8,8 @@ class CustomUserAdmin(UserAdmin):
     list_filter = ['user_type', 'is_verified', 'is_active', 'created_at']
     search_fields = ['email', 'username', 'first_name', 'last_name']
     ordering = ['-created_at']
+
+    readonly_fields = ('verification_token',)
     
     fieldsets = UserAdmin.fieldsets + (
         ('Additional Info', {
