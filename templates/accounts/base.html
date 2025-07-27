@@ -9,21 +9,35 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="{% url 'accounts:profile' %}">User Management</a>
-            <div class="navbar-nav ms-auto">
-                {% if user.is_authenticated %}
-                    <a class="nav-link" href="{% url 'accounts:profile' %}">Profile</a>
-                    {% if user.is_admin_user %}
-                        <a class="nav-link" href="{% url 'accounts:admin_users' %}">Admin Panel</a>
-                    {% endif %}
-                    <a class="nav-link" href="{% url 'accounts:logout' %}">Logout</a>
-                {% else %}
-                    <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
-                    <a class="nav-link" href="{% url 'accounts:register' %}">Register</a>
-                {% endif %}
-            </div>
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'accounts:profile' %}">User Management</a>
+        <div class="navbar-nav ms-auto">
+        {% if user.is_authenticated %}
+            <a class="nav-link" href="{% url 'accounts:profile' %}">Profile</a>
+            {% if user.is_admin_user %}
+            <a class="nav-link" href="{% url 'accounts:admin_users' %}">Admin Panel</a>
+            {% endif %}
+
+            {# Hidden POST form #}
+            <form id="logout-form"
+                method="post"
+                action="{% url 'accounts:logout' %}"
+                style="display: none;">
+            {% csrf_token %}
+            </form>
+
+            {# “Link” that submits the form #}
+            <a class="nav-link"
+            href="#"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            Logout
+            </a>
+        {% else %}
+            <a class="nav-link" href="{% url 'accounts:login' %}">Login</a>
+            <a class="nav-link" href="{% url 'accounts:register' %}">Register</a>
+        {% endif %}
         </div>
+    </div>
     </nav>
 
     <div class="container mt-4">
